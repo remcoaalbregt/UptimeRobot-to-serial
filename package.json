@@ -1,0 +1,26 @@
+{
+  "name": "Monitor-server",
+  "version": "0.2.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist",
+    "build:production": "NODE_ENV=production yarn run build",
+    "serve": "node dist/index.js"
+  },
+  "dependencies": {
+    "node-cron": "^1.2.1",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.76.0",
+    "nodemon": "^1.18.3"
+  }
+}
